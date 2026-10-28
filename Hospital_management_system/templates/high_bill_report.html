@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>High Bill Report</title>
+</head>
+<body>
+
+    <h1>High Bill Report</h1>
+    <h2>Patients with Bills Above Average</h2>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Patient Name</th>
+            <th>Bill Amount</th>
+        </tr>
+
+        {% for row in report %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>₹{{ "%.2f"|format(row[1] or 0) }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/">Back to Dashboard</a>
+
+</body>
+</html>

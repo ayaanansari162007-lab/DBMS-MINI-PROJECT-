@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hospital Billing</title>
+</head>
+<body>
+    <h1>Hospital Management System</h1>
+    <h2>Bill Records</h2>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Bill ID</th>
+            <th>Patient Name</th>
+            <th>Amount (₹)</th>
+            <th>Payment Status</th>
+        </tr>
+
+        {% for bill in bills %}
+        <tr>
+            <td>{{ bill[0] }}</td>
+            <td>{{ bill[1] }}</td>
+            <td>{{ bill[2] }}</td>
+            <td>{{ bill[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/">Back to Dashboard</a>
+</body>
+</html>

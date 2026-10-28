@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Appointment Management</title>
+</head>
+
+<body>
+
+    <h1>Appointment Management</h1>
+    <h2>Appointment Records</h2>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Appointment ID</th>
+            <th>Patient Name</th>
+            <th>Doctor Name</th>
+            <th>Appointment Date</th>
+        </tr>
+
+        {% for appointment in appointments %}
+        <tr>
+            <td>{{ appointment[0] }}</td>
+            <td>{{ appointment[1] }}</td>
+            <td>{{ appointment[2] }}</td>
+            <td>{{ appointment[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/">Back to Dashboard</a>
+
+</body>
+
+</html>

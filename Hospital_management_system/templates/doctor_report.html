@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Report</title>
+</head>
+
+<body>
+
+    <h1>Doctor Appointment Report</h1>
+    <h2>Doctors with More Than One Appointment</h2>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Doctor Name</th>
+            <th>Total Appointments</th>
+        </tr>
+
+        {% for row in report %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/">Back to Dashboard</a>
+
+</body>
+
+</html>

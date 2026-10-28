@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            margin: 0;
+            text-align: center;
+        }
+
+        header {
+            background: #00796b;
+            color: white;
+            padding: 25px;
+        }
+
+        .card {
+            display: inline-block;
+            background: white;
+            margin: 20px;
+            padding: 30px;
+            width: 220px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Hospital Management System</h1>
+        <p>Hospital Administration Dashboard</p>
+    </header>
+
+    <p>
+        <a href="/appointment_report">
+            <button type="button">View Appointment Report</button>
+        </a>
+    </p>
+    <p>
+    <a href="/treatments">
+        <button type="button">View Treatments</button>
+    </a>
+</p>
+    <p>
+        <a href="/billing_report">
+            <button type="button">View Billing Report</button>
+        </a>
+    </p>
+    <p>
+    <a href="/bills">
+        <button type="button">View All Bills</button>
+    </a>
+</p>
+    <p>
+        <a href="/payment_report">
+            <button type="button">View Payment Summary Report</button>
+        </a>
+    </p>
+    <div class="card">
+        <a href="/patients" style="text-decoration: none; color: inherit;">
+            <h3>Patients</h3>
+            <p>Total: {{ patients }}</p>
+            <p>Manage patient records</p>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="/doctors" style="text-decoration: none; color: inherit;">
+            <h3>Doctors</h3>
+            <p>Total Doctors: {{ doctors }}</p>
+            <p>Manage doctor records</p>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="/appointments" style="text-decoration: none; color: inherit;">
+            <h3>Appointments</h3>
+            <p>Total Appointments: {{ appointments }}</p>
+            <p>Manage appointments</p>
+        </a>
+    </div>
+
+</body>
+
+</html>
